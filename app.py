@@ -1,6 +1,5 @@
 import json
 import bottle
-from bson import json_util
 from bottle import route, run, request, abort, response
 from pymongo import Connection
  
