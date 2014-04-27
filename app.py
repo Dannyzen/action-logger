@@ -15,8 +15,6 @@ def add_action():
     print entity
     if not entity.has_key('actionName'):
         abort(400, 'I need an action')
-    if not entity.has_key('time'):
-        abort(400, 'I need a time')
     try:
         db['action'].save(entity)
     except ValidationError as valerr:
