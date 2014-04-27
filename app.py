@@ -5,7 +5,7 @@ from bottle import route, run, request, abort, response
 from pymongo import Connection
  
 connection = Connection('localhost', 27017)
-db = connection.mydatabase
+db = connection.actions
 
 @route('/action', method='POST')
 def add_action():
