@@ -25,4 +25,4 @@ def add_action():
     except ValidationError as valerr:
         abort(400, str(valerr))
 
-run(host='localhost', port=8080)
+run(host='0.0.0.0', port=8080)
