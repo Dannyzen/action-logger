@@ -5,7 +5,8 @@ from pymongo import Connection
 connection = Connection('localhost', 27017)
 db = connection.actions
 
-#action_name = "enter_car"
+#pass help for action names
+#pass an action for times
 
 def showActions():
         actions = db["action"].find({"action":{"$exists":True}},{"action":1})
