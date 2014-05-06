@@ -2,14 +2,14 @@ from sys import argv
 from time import localtime, strftime
 from pymongo import Connection
 
-connection = Connection('localhost', 27017)
+connection = Connection()
 db = connection.actions
 
 #pass help for action names
 #pass an action for times
 
 def showActions():
-        actions = db["action"].find({"action":{"$exists":True}},{"action":1})
+        actions = db["action"].find({"action":{"$ne":None}},{"action":1})
         for item in actions:
                 print item['action']
 
